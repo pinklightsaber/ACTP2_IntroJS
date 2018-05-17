@@ -12,8 +12,38 @@ de un segundo, al volver hacer click debe volver a estar en blanco y negro.
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+    	.des {
+    		 filter: none;
+		    -webkit-filter: grayscale(100%);
+		    -moz-filter:    grayscale(100%);
+		    -ms-filter:     grayscale(100%);
+		    -o-filter:      grayscale(100%);
+		    cursor: pointer;
+		    transition: all 1s ease;
+    	}
+
+    	.color {
+    		transition: 1s;
+    	}
+    </style>
+   	<script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
+
   </head>
   <body>
+
+  	<img src="totoro.jpg" class="des">
+	<img src="totoro-before-christmas.jpg" class="des">
+	<img src="totoro.gif" class="des">
+	<img src="triste.jpg" class="des">
+
+  	<script>
+
+  		$("img").click(function(){
+  			$(this).toggleClass("des");
+  			$(this).toggleClass("color");
+  		 }); 
+  	</script>
 
   </body>
 </html>

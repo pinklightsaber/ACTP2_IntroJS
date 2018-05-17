@@ -10,8 +10,25 @@ Tip: Investigar el evento window.onload
   <head>
     <meta charset="utf-8">
     <title></title>
+
   </head>
   <body>
+		<img src="totoro.png" alt="">
+  		<img src="totoro.jpg" alt="">
+
+	  	<script src="https://code.jquery.com/jquery-3.3.1.min.js">
+			  	
+	</script>
+
+  	<script>
+ 		$(window).on( "load", function() {		
+		    alert("1 ahora las imagenes, ves")
+		});
+
+		$(document).ready( function() {
+  			alert("2 se cargó del DOM")
+  		});
+  	</script>
 
   </body>
 </html>
